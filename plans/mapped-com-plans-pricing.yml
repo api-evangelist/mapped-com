@@ -95,3 +95,47 @@ delivery:
 note: 'Page mentions: ''All prices listed in USD.'' Also mentions additional fees for data overage and edge gateways. PRO/Enterprise plans include
   limited pre-bundled data with overages charged separately.'
 docs: https://www.mapped.com/pricing
+x-canonical:
+  generated: '2026-10-18'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units: []
+  plans:
+  - name: Starter
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Pro
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: A-La-Carte
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Virtual Gateway
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Physical Gateway
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
