@@ -1,0 +1,29 @@
+generated: '2026-10-18'
+method: searched
+generator: extract-docs-artifacts.py (deepseek)
+source: https://docs.mapped.com/guides/platform/authentication-security.md
+sources:
+- https://docs.mapped.com/guides/platform/authentication-security.md
+- https://docs.mapped.com/guides/support/security-whitepaper.md
+standards:
+- id: soc2
+  conforms: true
+  evidence: Mapped is SOC2 Type 2 and ISO27001 compliant - SOC 2 Letter, audit reports and similar documentation can be provided upon request.
+- id: iso-27001
+  conforms: true
+  evidence: Mapped is SOC2 Type 2 and ISO27001 compliant - SOC 2 Letter, audit reports and similar documentation can be provided upon request.
+note: The page explicitly claims SOC2 Type 2 and ISO27001 compliance in the same sentence.
+docs: https://docs.mapped.com/guides/platform/authentication-security.md
+domain_standard_conformance:
+- id: brick
+  conforms: true
+  evidence: The Mapped ontology combines Brick, RealEstateCore (REC), BACnet and Mapped's own classes. The ontology page states "Source Classes What it covers Mapped 2,454 Mapped's own classes, including the Brick and RealEstateCore classes Mapped publishes under its own URIs."
+  source: https://docs.mapped.com/ontology
+- id: realestatecore
+  conforms: true
+  evidence: The Mapped ontology combines Brick, RealEstateCore (REC), BACnet and Mapped's own classes. REC classes cover organizations, leases and real-estate spaces from RealEstateCore.
+  source: https://docs.mapped.com/ontology
+- id: bacnet
+  conforms: true
+  evidence: The ontology includes BACnet protocol object types for external references. Mapped supports BACnet protocol for building automation systems.
+  source: https://docs.mapped.com/ontology

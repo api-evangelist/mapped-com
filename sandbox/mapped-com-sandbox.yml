@@ -1,0 +1,19 @@
+generated: '2026-10-18'
+method: searched
+generator: extract-docs-artifacts.py (deepseek)
+source: https://docs.mapped.com/guides/platform/sandbox.md
+sources:
+- https://docs.mapped.com/guides/platform/sandbox.md
+description: A sandbox org with simulated building data powered by EnergyPlus (E+) simulation engine, featuring the "Intellicare Infirmary" building
+  model with 3,804 m2 area, 3 floors, 118 HVAC zones, and 3,004 points available for testing queries.
+modes:
+- name: Sandbox Mode
+  base_url: https://app.mapped.com
+  portal: Console
+  how_to_get_access: Go to the Console and look along the top menu bar for a toggle switch that says Sandbox Mode. Once clicked, you'll be prompted
+    to select the TenantyWorks (Sandbox) org - click Switch and you're in.
+time_simulation: The building model has been simulated for the weather conditions of a typical year in Denver, CO using a TMY3 weather file.
+note: The sandbox is read-only and cannot be modified. It uses a building simulator powered by EnergyPlus (E+) with the "Intellicare Infirmary"
+  building model from PNNL prototype buildings, complying with ASHRAE 90.1 standard.
+docs:
+- https://docs.mapped.com/guides/platform/sandbox.md

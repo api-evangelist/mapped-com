@@ -1,0 +1,11 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://www.mapped.com/changelog
+- https://status.mapped.com/
+- https://docs.mapped.com/
+versioning: Continuous deployment with changelog published at https://www.mapped.com/changelog
+deprecation: No explicit deprecation policy found in documentation
+status_page: https://status.mapped.com/
+sla: No published SLA found in documentation
+note: Changelog shows regular updates with version history. Status page shows system components and historical uptime. No explicit versioning, deprecation, or SLA policy documentation found.

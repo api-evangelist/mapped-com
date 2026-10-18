@@ -1,0 +1,5 @@
+generated: '2026-10-18'
+method: none
+install: ''
+commands: []
+note: No first-party CLI found for the Mapped API. UG-SHELL is a gateway configuration tool for edge devices, not a general API CLI. No CLI documentation found in the main documentation.

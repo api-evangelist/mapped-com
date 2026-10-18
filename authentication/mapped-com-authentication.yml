@@ -1,0 +1,19 @@
+generated: '2026-10-18'
+method: searched
+generator: extract-docs-artifacts.py (deepseek)
+source: https://docs.mapped.com/guides/platform/authentication-security.md
+sources:
+- https://docs.mapped.com/guides/platform/authentication-security.md
+- https://docs.mapped.com/api/types/api-key.md
+- https://docs.mapped.com/api/types/api-key-input.md
+- https://docs.mapped.com/api/types/org-authentication-challenge.md
+description: Authentication for Mapped API using Personal Access Tokens
+schemes:
+- type: apiKey
+  name: Personal Access Token
+  evidence: All Mapped API calls will make use of a Personal Access Token
+  header: Authorization
+  location: header
+  how_to_obtain: generated on the Personal Access Token page of the Mapped Console
+docs: https://docs.mapped.com/guides/platform/authentication-security.md
+note: 'The documentation shows the token is passed as "Authorization: token {TOKEN_VALUE}" where "token" is the token type prefix'

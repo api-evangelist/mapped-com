@@ -1,0 +1,33 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.mapped.com/guides/platform/authentication-security.md
+docs: https://docs.mapped.com/guides/platform/authentication-security.md
+scopes:
+- scope: PERSONALACCESSTOKEN_READ
+  description: Read personal access tokens for your own user
+  evidence: "To view all tokens associated with your user, you'll need a token with the scope PERSONALACCESSTOKEN_READ."
+- scope: PERSONALACCESSTOKEN_READ_ALL
+  description: Read personal access tokens for all users (ADMIN only)
+  evidence: "If you want to view all tokens associated with a particular user, you'll need to be an ADMIN and have a token with the scope PERSONALACCESSTOKEN_READ_ALL"
+- scope: PERSONALACCESSTOKEN_READWRITE
+  description: Create and manage your own personal access tokens
+  evidence: "If the token you're using to make API calls has the PERSONALACCESSTOKEN_READWRITE (or PERSONALACCESSTOKEN_READWRITE_ALL for an ADMIN), you can create a new token programmatically."
+- scope: PERSONALACCESSTOKEN_READWRITE_ALL
+  description: Create and manage personal access tokens for all users (ADMIN only)
+  evidence: "If you're an ADMIN and your token has the permission PERSONALACCESSTOKEN_READWRITE_ALL, then you can remove a token from anyone in your organization."
+- scope: ORG_READ
+  description: Read organization information
+  evidence: "The following example creates a token with the ORG_READ and USER_READ permissions"
+- scope: USER_READ
+  description: Read user information
+  evidence: "The following example creates a token with the ORG_READ and USER_READ permissions"
+- scope: PLACE_READ_ALL
+  description: Read all place information
+  evidence: Found in example response showing permissions array
+- scope: THING_READ_ALL
+  description: Read all thing information
+  evidence: Found in example response showing permissions array
+- scope: USER_READ_ALL
+  description: Read all user information
+  evidence: Found in example response showing permissions array
+note: Scopes are used for Personal Access Token permissions, not OAuth2. Documentation mentions scopes are role-dependent (ADMIN vs EXPLORER). EXPLORER role has read-only access to most resources.

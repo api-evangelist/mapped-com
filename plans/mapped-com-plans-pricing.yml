@@ -1,0 +1,97 @@
+generated: '2026-10-18'
+method: searched
+generator: extract-docs-artifacts.py (deepseek)
+source: https://www.mapped.com/pricing
+sources:
+- https://www.mapped.com/pricing
+- https://docs.mapped.com/api/types/billing-calculated-product-bundle-response.md
+- https://docs.mapped.com/api/types/billing-calculation-response.md
+- https://docs.mapped.com/api/types/billing-product-bundle-subscription-response.md
+name: Mapped pricing
+plans:
+- name: Starter
+  price_text: $0
+  price: 0
+  description: Freemium plan that makes it easy for users to explore the platform for free, use sandbox data, and try data tagging using 100s
+    of Mapped pre-built connectors. Up to 5 buildings.
+  features:
+  - Explore platform
+  - Sandbox data
+  - Data tagging
+  - Pre-built connectors
+  - API documentation
+  - Test solutions on actual buildings
+  limits:
+  - name: buildings
+    limit_text: Up to 5 buildings
+  - name: gateway_support
+    limit_text: Does not support Mapped edge gateway or data sources like BAS or BMS system or HVAC Systems
+- name: Pro
+  price_text: $/building $/SQFT
+  description: A bundled subscription plan for teams ready to build and deploy AI and agent applications at scale. Charged per-building or per-SQFT
+    and includes discovery, extraction, normalization, and retention of data originating from on-prem building systems, legacy protocols, and
+    vendor APIs.
+  features:
+  - Discovery
+  - Extraction
+  - Normalization
+  - Retention of data
+  - Connectors
+  - Data graph
+  - Time series retention
+  - Pre-bundled data consumption
+  limits:
+  - name: pricing_basis
+    limit_text: Per-building or per-SQFT
+- name: Enterprise
+  price_text: Custom
+  description: For organizations deploying AI-driven operations across a full portfolio. All Pro capabilities, tailored to your scale, systems,
+    and use cases.
+  features:
+  - All Pro capabilities
+  - Tailored to scale
+  - Custom features
+  - Flexible pricing options
+  - Minimum contract value
+- name: A-La-Carte
+  price_text: $/module
+  description: Usage-based access to individual platform modules, metered and charged monthly. Ideal for teams prototyping AI or agent applications
+    before committing to a full plan.
+  features:
+  - Discovery/Extraction (Source connectors)
+  - Normalization (Data Graph)
+  - Retention (Data Storage)
+  - Consumption (Destination connectors / API usage)
+  limits:
+  - name: pricing_basis
+    limit_text: Usage-based, metered and charged monthly
+- name: Virtual Gateway
+  price_text: $250 / Month
+  price: 250
+  description: Virtual gateway software UG100 has a recurring monthly fee per deployed instance. Containerized software.
+  features:
+  - Virtual gateway software
+  - Containerized deployment
+  limits:
+  - name: deployment
+    limit_text: Per deployed instance
+- name: Physical Gateway
+  price_text: one-time fee per unit
+  description: Physical gateway has a one-time fee per unit. Mapped hardware pre-loaded with the gateway software.
+  features:
+  - Physical hardware gateway
+  - Pre-loaded gateway software
+  limits:
+  - name: pricing
+    limit_text: One-time fee per unit
+audience: business-product
+pricing_basis: tiered-subscription
+currency: USD
+delivery:
+  delivery: managed
+  evidence: SaaS platform with cloud-hosted data graph and API
+  free_edition: Starter
+  managed_tier: Pro
+note: 'Page mentions: ''All prices listed in USD.'' Also mentions additional fees for data overage and edge gateways. PRO/Enterprise plans include
+  limited pre-bundled data with overages charged separately.'
+docs: https://www.mapped.com/pricing

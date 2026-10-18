@@ -1,0 +1,104 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://www.mapped.com/legal/privacy-policy
+- https://www.mapped.com/legal/data-retention-policy
+- https://www.mapped.com/legal/CustomerAgreement
+notes: >-
+  Legal hub at https://www.mapped.com/legal lists Privacy Policy, Data Retention Policy, Cookie Policy,
+  Mapped Customer Agreement and Service Level Agreement. https://www.mapped.com/security and /trust
+  returned 404. /legal/terms-of-service and /legal/subprocessors return 200 but serve the Privacy Policy
+  page (catch-all), so they are not evidence of a terms or subprocessor page. No subprocessor list, AI
+  transparency, GPC, accessibility or SBOM statement was found on these pages.
+signals:
+  data_subject_request:
+    url: https://www.mapped.com/legal/privacy-policy
+    section: Rights of Access, Modification, Deletion and Restriction of Your Information.
+    channel: email with subject "Data Subject Request" (or "CCPA Rights Request" for California consumers)
+    evidence:
+    - source: https://www.mapped.com/legal/privacy-policy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: >-
+        Those rights may include asking us to provide information (including categories of sources), access,
+        export, modification, deletion, or to restrict processing of certain of your personal data.
+    - source: https://www.mapped.com/legal/privacy-policy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: >-
+        Please note that we cannot process your request directly, as your information is controlled by that
+        Subscriber, and we do not directly have a relationship with you
+    note: >-
+      Names access, export, modification, deletion and restriction rights for EEA/UK/California users, with
+      an email channel; users of a Customer account must route requests through the Customer's administrator.
+      No response deadline is stated ("We will endeavor to promptly respond to your request").
+  data_retention:
+    url: https://www.mapped.com/legal/data-retention-policy
+    section: Time Series Data
+    evidence:
+    - source: https://www.mapped.com/legal/data-retention-policy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: >-
+        This data will be retained by Mapped for up to 12 months from the date of collection, depending on the
+        subscription plan.
+    - source: https://www.mapped.com/legal/data-retention-policy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: >-
+        If a customer cancels their subscription or their account is otherwise terminated, their graph data
+        will be deleted from Mapped’s systems.
+    - source: https://www.mapped.com/legal/data-retention-policy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: >-
+        When data is deleted from Mapped’s systems, it will be permanently and irrevocably removed from both
+        production systems and backups.
+    note: >-
+      A dedicated, dated (December 14, 2022) retention policy: graph data kept while the customer is active
+      and deleted on termination; time-series data kept up to 12 months by plan; deletion covers backups.
+      The Privacy Policy separately says personal data may persist in archived/backup copies after a
+      deletion request, which sits in tension with the retention policy for customer data.
+  data_residency:
+    url: https://www.mapped.com/legal/privacy-policy
+    section: What about international data transfer?
+    evidence:
+    - source: https://www.mapped.com/legal/privacy-policy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: >-
+        Specifically, if you are located outside the United States and provide your personal data to us, we
+        may transfer your personal data to the United States and process it there, subject to the following
+        safeguards:
+    note: >-
+      Personal data is processed in the United States; the safeguard named is self-certification to the
+      EU-U.S. and Swiss-U.S. Privacy Shield (policy last updated January 12, 2022). No regional hosting or
+      residency choice is offered on these pages.
+  incident_notification:
+    url: https://www.mapped.com/legal/CustomerAgreement
+    section: 12.6 Security Incident.
+    direction: customer-to-provider
+    evidence:
+    - source: https://www.mapped.com/legal/CustomerAgreement
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: >-
+        Customer shall: (a) provide Mapped with written notice of the Security Incident without undue delay
+        and within 72 hours after becoming aware of the Security Incident;
+    note: >-
+      The only incident-notice clause found runs from the Customer TO Mapped (for incidents originating in
+      the Customer's systems). No commitment by Mapped to notify customers of its own breaches was found in
+      the Customer Agreement or Privacy Policy.
+  age_assurance:
+    url: https://www.mapped.com/legal/privacy-policy
+    section: Does Mapped collect children’s data?
+    evidence:
+    - source: https://www.mapped.com/legal/privacy-policy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: >-
+        Mapped products and services are not directed to children under 18 years of age and Mapped does not
+        knowingly collect personal data from children under 18 years of age.
+    note: >-
+      A not-directed-to-children statement with deletion on discovery; no age-verification mechanism is
+      described.

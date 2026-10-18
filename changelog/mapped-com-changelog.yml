@@ -1,0 +1,23 @@
+generated: '2026-10-18'
+method: searched
+source: https://www.mapped.com/changelog
+scheme: date-based changelog
+current_version: Continuous deployment
+entries:
+- version: September 2026 Release
+  date: '2026-09-10'
+  breaking: false
+  highlights:
+  - Connector and data reliability improvements
+  - Simplified work order connector configuration
+  - Expanded authentication options
+  - Improved synchronization and data reliability across integrations
+- version: August 2026 Release
+  date: '2026-08-24'
+  breaking: false
+  highlights:
+  - Connector, Console, Expert Center, and Admin Center improvements
+  - Work order synchronization improvements
+  - Connector resilience enhancements
+  - Sensor and occupancy data reliability improvements
+note: Changelog shows monthly releases with detailed improvement notes. No version numbers used - dated releases only.

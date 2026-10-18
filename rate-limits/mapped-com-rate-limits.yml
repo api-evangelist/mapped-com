@@ -1,0 +1,7 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.mapped.com/api/types/niagara-rpc-error-code
+name: Mapped rate limits
+limit_count: 0
+limits: []
+note: No published rate limits found in documentation. NiagaraRpcErrorCode enum includes TOO_MANY_REQUESTS error code indicating rate limiting exists but no specific limits, windows, or headers documented.

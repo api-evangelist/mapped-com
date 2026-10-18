@@ -1,0 +1,43 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://github.com/mapped
+- https://docs.mapped.com/
+packages:
+- name: pb
+  registry: github
+  url: https://github.com/mapped/pb
+  language: Python
+  official: true
+  description: Public Mapped Platform Service Definitions
+  version: null
+  published: null
+  note: Protocol buffer definitions repository
+- name: pb-go
+  registry: github
+  url: https://github.com/mapped/pb-go
+  language: Go
+  official: true
+  description: Generated golang modules for public Mapped Platform Service Definitions
+  version: null
+  published: null
+  note: Go modules generated from protocol buffers
+- name: mapped-insomnia-collection
+  registry: github
+  url: https://github.com/mapped/mapped-insomnia-collection
+  language: JSON
+  official: true
+  description: Insomnia collection for the Mapped GraphQL API
+  version: null
+  published: null
+  note: API client collection for Insomnia
+- name: ontology-public
+  registry: github
+  url: https://github.com/mapped/ontology-public
+  language: JSON-LD
+  official: true
+  description: Mapped ontology used for modeling data in Mapped graphs
+  version: null
+  published: null
+  note: Ontology definitions in JSON-LD format
+note: No official SDK packages found in npm, PyPI, Maven, NuGet, RubyGems, crates.io, or Packagist registries. The provider maintains protocol buffer definitions and generated Go modules on GitHub, along with an Insomnia collection and public ontology.

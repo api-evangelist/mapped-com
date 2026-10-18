@@ -1,23 +1,178 @@
 aid: mapped-com
+
 name: Mapped
-description: 'Mapped is a company surfaced via the API Evangelist harvest backlog (source: kin-score-markets)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Mapped turns any building's systems, sensors, and devices into a structured, real-time world model — the data foundation AI agents and applications need to understand and act on the physical world. Its platform normalizes building data through source and destination connectors and on-premises gateways into an ontology based on Brick, REC and Mapped classes, exposed through the Mapped GraphQL API and a Mapped MCP server for AI agents.
+
 url: https://raw.githubusercontent.com/api-evangelist/mapped-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:kin-score-markets
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-18 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-18'
+
 modified: '2026-10-18'
+
 tags:
 - Company
-apis: []
+- Smart Buildings
+- IoT
+- GraphQL
+- Data Integration
+- Ontology
+- Physical AI
+- MCP
+tags_raw:
+- Company
+- Smart Buildings
+- Internet of Things
+- GraphQL
+- Data Integration
+- Ontology
+- Physical AI
+- Model Context Protocol
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.mapped.com/img/og-image.png
+
 common:
+- type: Plans
+  url: plans/mapped-com-plans-pricing.yml
+- type: ChangeLog
+  url: changelog/mapped-com-changelog.yml
+- type: Conventions
+  url: conventions/mapped-com-conventions.yml
+- type: Sandbox
+  url: sandbox/mapped-com-sandbox.yml
+- type: Authentication
+  url: authentication/mapped-com-authentication.yml
+- type: OAuthScopes
+  url: scopes/mapped-com-scopes.yml
+- type: Lifecycle
+  url: lifecycle/mapped-com-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/mapped-com-problem-types.yml
+- type: Conformance
+  url: conformance/mapped-com-conformance.yml
+- type: LLMsTxt
+  url: llms/mapped-com-llms.txt
+- type: MCPServer
+  url: mcp/mapped-com-mcp.yml
+- type: SecurityTxt
+  url: well-known/mapped-com-status-security.txt
+- type: WellKnown
+  url: well-known/mapped-com-well-known.yml
+- type: Hosts
+  url: hosts/mapped-com-hosts.yml
+- type: IntegrationEdges
+  url: integrations/mapped-com-integration-edges.yml
+- type: Vendors
+  url: vendors/mapped-com-vendors.yml
+- type: SDKs
+  url: packages/mapped-com-packages.yml
+- type: Packages
+  url: packages/mapped-com-packages.yml
 - type: Website
-  url: https://mapped.com
+  url: https://www.mapped.com
+- type: DeveloperPortal
+  url: https://www.mapped.com/developers
+- type: Documentation
+  url: https://docs.mapped.com/
+- type: APIReference
+  url: https://docs.mapped.com/api
+- type: GettingStarted
+  url: https://docs.mapped.com/guides/platform/introduction
+- type: Support
+  url: https://support.mapped.com/hc/en-us
+- type: Blog
+  url: https://blog.mapped.com/
+- type: ChangeLog
+  url: https://www.mapped.com/changelog
+- type: StatusPage
+  url: https://status.mapped.com/
+- type: GitHubOrganization
+  url: https://github.com/mapped
+- type: Pricing
+  url: https://www.mapped.com/pricing
+- type: SignUp
+  url: https://app.mapped.com/signup
+- type: Login
+  url: https://app.mapped.com/
+- type: TermsOfService
+  url: https://www.mapped.com/legal/CustomerAgreement
+- type: PrivacyPolicy
+  url: https://www.mapped.com/legal/privacy-policy
+- type: DomainSecurity
+  url: security/mapped-com-domain-security.yml
+
+apis:
+- aid: mapped-com:mapped-graphql-api
+  name: Mapped GraphQL API
+  description: The Mapped API is a single GraphQL endpoint exposing every query, mutation and type of the Mapped building world model (70 queries, 99 mutations), authenticated with a Personal Access Token sent in the Authorization header as "token <PAT>". Schema captured by anonymous introspection of https://api.mapped.com/graphql on 2026-10-18.
+  humanURL: https://docs.mapped.com/api
+  baseURL: https://api.mapped.com/graphql
+  tags:
+  - GraphQL
+  - Smart Buildings
+  - Ontology
+  properties:
+  - type: GraphQL
+    url: graphql/mapped-com-graphql.graphql
+  - type: GraphQL
+    name: GraphQL Introspection (JSON)
+    url: graphql/mapped-com-graphql-introspection.json
+  - type: Documentation
+    url: https://docs.mapped.com/api
+- aid: mapped-com:mapped-mcp-server
+  name: Mapped MCP Server
+  description: Hosted Mapped Model Context Protocol server with two tool sets - GraphQL generation and execution against the Mapped API, and Mapped ontology navigation. The endpoint answers anonymous tools/list with 401 and an OAuth protected-resource challenge.
+  humanURL: https://docs.mapped.com/guides/mcp/introduction-to-mapped-mcp
+  baseURL: https://mcp.mapped.com/mcp
+  tags:
+  - MCP
+  - AI Agents
+  tags_raw:
+  - Model Context Protocol
+  - AI Agents
+  properties:
+  - type: Documentation
+    url: https://docs.mapped.com/guides/mcp/introduction-to-mapped-mcp
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Identity from www.mapped.com meta description and docs.mapped.com rendered home; pointers from site footer/legal page and docs nav.
+  evidence:
+  - url: https://www.mapped.com/
+    status: 200
+  - url: https://docs.mapped.com/
+    status: 200
+  - url: https://docs.mapped.com/api
+    status: 200
+  - url: https://docs.mapped.com/guides/platform/introduction
+    status: 200
+  - url: https://www.mapped.com/legal/CustomerAgreement
+    status: 200
+  - url: https://blog.mapped.com/
+    status: 403
+    note: Medium publication; renders in browser
+  - url: https://support.mapped.com/hc/en-us
+    status: 403
+    note: Zendesk edge policy; preflight browser check 200
+x-enrichment:
+  date: '2026-10-18'
+  status: enriched
+  artifacts_added: 29
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=deepseek,regulatory=anthropic

@@ -1,0 +1,27 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://docs.mapped.com/guides/platform/filtering
+- https://docs.mapped.com/guides/platform/authentication-security.md
+- https://docs.mapped.com/api
+auth_style: Personal Access Token in Authorization header with "token" prefix
+idempotency:
+  coverage: none
+  note: No idempotency mechanism documented for GraphQL mutations
+pagination:
+  style: GraphQL connections with filter arguments
+  params: filter argument with operators (eq, ne, in, contains, and, or, not)
+  response_fields: GraphQL list types with nested filtering
+  note: Most list fields accept filter arguments for querying and filtering results
+field_expansion: GraphQL field selection (client specifies exact fields to return)
+metadata: ExtendedProperty type for additional metadata on entities
+request_id_tracing: No request ID tracing documented
+versioning: No API versioning documented; single GraphQL endpoint
+error_envelope: GraphQL error format with NiagaraRpcErrorCode enum
+rate_limit_signaling: TOO_MANY_REQUESTS error code in NiagaraRpcErrorCode enum
+reversibility:
+  documented: false
+  note: No documented reversal operations or windows found for write operations. GraphQL mutations include delete operations but no explicit cancel/refund/void operations documented.
+  window: null
+dry_run_mode: na
+note: GraphQL API with comprehensive filtering system. No documented pagination cursor/limit/offset parameters found - uses GraphQL field selection and filtering instead.

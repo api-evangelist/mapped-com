@@ -1,0 +1,54 @@
+type: MCPServer
+name: Mapped MCP Server
+generated: '2026-10-18'
+method: probed
+source:
+- https://docs.mapped.com/guides/mcp/introduction-to-mapped-mcp.md
+- https://github.com/mapped/claude-plugins/blob/HEAD/README.md
+- https://github.com/mapped/claude-plugins/blob/HEAD/mapped-mcp/.claude-plugin/plugin.json
+- https://mcp.mapped.com/.well-known/oauth-protected-resource/mcp
+status: official
+server:
+  name: mapped
+  endpoint: https://mcp.mapped.com/mcp
+  transport: streamable-http
+  provider: Mapped
+  claude_plugin: "/plugin marketplace add mapped/claude-plugins && /plugin install mapped-mcp@mapped (plugin version 0.1.1)"
+  source_repo_note: plugin.json names https://github.com/mapped/mapped-mcp as homepage/repository; that repo returned 404 (not public) on 2026-10-18.
+deployment:
+  mode: remote
+  endpoint: https://mcp.mapped.com/mcp
+  auth: api-key
+  verified: probed
+  probe:
+    date: '2026-10-18'
+    request: POST tools/list (anonymous)
+    status: 401
+    www_authenticate: Bearer resource_metadata="https://mcp.mapped.com/.well-known/oauth-protected-resource/mcp"
+auth:
+  documented: 'Personal Access Token sent as header "Authorization: token <PAT>" (created in the Mapped Console)'
+  protected_resource_metadata:
+    url: https://mcp.mapped.com/.well-known/oauth-protected-resource/mcp
+    status: 200
+    resource: https://mcp.mapped.com/mcp
+    authorization_servers:
+    - https://sso.mapped.com/
+    scopes_supported: [openid, profile, email]
+    bearer_methods_supported: [header]
+tools:
+# Names published by Mapped in the claude-plugins README; NOT read from a live tools/list (gated, 401).
+- name: graphql_gen
+  description: Generate a Mapped GraphQL query from a natural-language request.
+  documented_in: https://github.com/mapped/claude-plugins/blob/HEAD/README.md
+  evidence_strength: list
+- name: graphql_gen_with_results
+  description: Generate a Mapped GraphQL query from a natural-language request and run it against the Mapped API, returning results.
+  documented_in: https://github.com/mapped/claude-plugins/blob/HEAD/README.md
+  evidence_strength: list
+tool_sets:
+- name: GraphQL generation & execution
+  tools: [graphql_gen, graphql_gen_with_results]
+- name: Ontology navigation
+  description: Walk the entity-type hierarchy, search entity types by tag, and fetch a type's full definition (properties, relationships, parents).
+  tools: []
+  note: Documented as a tool set on the intro page; individual tool names are not published and the live tools/list is gated.

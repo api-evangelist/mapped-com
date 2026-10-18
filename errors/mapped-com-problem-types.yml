@@ -1,0 +1,48 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://docs.mapped.com/api/types/niagara-rpc-error-code
+format: GraphQL errors
+envelope: GraphQL error response format
+problems:
+- status: 400
+  title: INVALID_ARGUMENT
+  type: NiagaraRpcErrorCode.INVALID_ARGUMENT
+  description: Invalid argument provided
+  remediation: Check request parameters
+- status: 401
+  title: NOT_AUTHORIZED
+  type: NiagaraRpcErrorCode.NOT_AUTHORIZED
+  description: Authentication required or invalid credentials
+  remediation: Provide valid Personal Access Token
+- status: 403
+  title: NOT_AUTHORIZED
+  type: NiagaraRpcErrorCode.NOT_AUTHORIZED
+  description: Insufficient permissions
+  remediation: Check token scopes and user role
+- status: 404
+  title: NOT_FOUND
+  type: NiagaraRpcErrorCode.NOT_FOUND
+  description: Resource not found
+  remediation: Check resource ID and existence
+- status: 409
+  title: CONFLICT
+  type: NiagaraRpcErrorCode.CONFLICT
+  description: Resource conflict
+  remediation: Check resource state
+- status: 429
+  title: TOO_MANY_REQUESTS
+  type: NiagaraRpcErrorCode.TOO_MANY_REQUESTS
+  description: Rate limit exceeded
+  remediation: Wait and retry
+- status: 500
+  title: INTERNAL_ERROR
+  type: NiagaraRpcErrorCode.INTERNAL_ERROR
+  description: Internal server error
+  remediation: Contact support
+- status: 503
+  title: UNAVAILABLE
+  type: NiagaraRpcErrorCode.UNAVAILABLE
+  description: Service unavailable
+  remediation: Wait and retry
+note: Error codes derived from NiagaraRpcErrorCode enum in GraphQL schema. No comprehensive error documentation page found.
