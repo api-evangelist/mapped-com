@@ -8,13 +8,17 @@ source:
 - https://composio.dev/toolkits/mapped-com
 - https://monid.ai/tools/mapped-com
 checked:
+- https://brickschema.org/consortium/
 - https://composio.dev/toolkits/mapped-com
 - https://make.com/en/integrations/mapped
+- https://marketing.project-haystack.org/about-us
 - https://monid.ai/tools/mapped-com
 - https://n8n.io/integrations/mapped
 - https://n8n.io/integrations/mapped-com/
 - https://n8n.io/integrations/mapped/
 - https://workato.com/integrations/mapped
+- https://www.bacnetinternational.net/btl/
+- https://www.knx.org/community/manufacturers
 - https://www.mapped.com/
 - https://www.mapped.com/connectors
 - https://zapier.com/apps/mapped
@@ -77,4 +81,27 @@ edges:
   marketplace: null
   operations: []
   note: Honeywell building management systems connector
+- partner_name: Brick Consortium (commercial members)
+  partner: brick
+  partner_match: register
+  type: register
+  direction: partner-built
+  evidence: https://brickschema.org/consortium/
+  category: building data semantics
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: Brick Consortium members (brickschema.org/consortium)
+    spec_file: null
+    standard: Brick Schema
+    role: brick-commercial-member
+    registered_name: Mapped
+    website: https://mapped.com/
+    matched_domain: mapped.com
+    matched_by: domain
+    signal_note: participation only
+    detected_by: sweep-building-automation.py
+    detected: '2026-10-19'
+  detected_by: sweep-building-automation.py
+  first_seen: '2026-10-19'
 templates: []
