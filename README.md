@@ -64,5 +64,51 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mapped is a company surfaced via the API Evangelist harvest backlog (source: kin-score-markets) and added to the network as a stub for full-pipeline profiling.
-- https://mapped.com
+Mapped turns any building's systems, sensors, and devices into a structured, real-time world model — the data foundation AI agents and applications need to understand and act on the physical world. Its platform normalizes building data through source and destination connectors and on-premises gateways into an ontology based on Brick, REC and Mapped classes, exposed through the Mapped GraphQL API and a Mapped MCP server for AI agents.
+
+**Areas:** Company · Smart Buildings · IoT · GraphQL · Data Integration · Ontology · Physical AI · MCP
+
+## Mapped on APIs.io
+
+Everything profiled for Mapped is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mapped-com/](https://apis.io/providers/mapped-com/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- Mapped GraphQL API — The Mapped API is a single GraphQL endpoint exposing every query, mutation and type of the Mapped building world model (70 queries, 99 mutations),…
+- Mapped MCP Server — Hosted Mapped Model Context Protocol server with two tool sets - GraphQL generation and execution against the Mapped API, and Mapped ontology navigation.…
+
+_These APIs get their own pages on APIs.io at the next catalog build, and this README is re-rendered with links when they do._
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.mapped.com)
+- [Documentation](https://docs.mapped.com/)
+- [Getting started](https://docs.mapped.com/guides/platform/introduction)
+- [API reference](https://docs.mapped.com/api)
+- [Pricing](https://www.mapped.com/pricing)
+- [Sign up](https://app.mapped.com/signup)
+- [Support](https://support.mapped.com/hc/en-us)
+- [Changelog](https://www.mapped.com/changelog)
+- [Blog](https://blog.mapped.com/)
+- [Terms of service](https://www.mapped.com/legal/CustomerAgreement)
+- [Privacy policy](https://www.mapped.com/legal/privacy-policy)
+- [GitHub](https://github.com/mapped)
+- [Status](https://status.mapped.com/)
+
+## API Evangelist rating
+
+Not yet rated. See [apis.io/providers/mapped-com/](https://apis.io/providers/mapped-com/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mapped: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mapped-com/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
